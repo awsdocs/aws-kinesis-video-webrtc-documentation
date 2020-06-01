@@ -1,14 +1,17 @@
 # SendSdpOffer<a name="kvswebrtc-websocket-apis3"></a>
 
-Sends the offer to the target recipient\. The prerequisite is that the client must be already connected to the WebSocket endpoint obtained from the `GetSignalingChannelEndpoint` API\. 
+Sends the offer to the target recipient\. The prerequisite is that the client must be already connected to the WebSocket endpoint obtained from the `GetSignalingChannelEndpoint` API\.
 
-For `SINGLE_MASTER` channels, only viewers are allowed to send offers\. A viewer is only allowed to send an offer to a master\. A viewer cannot send an offer to another viewer\. If a viewer client app attempts to send an offer to another viewer client app, the request will NOT be honored\. If there is an outstanding offer for the same client which is not yet delivered, it is overwritten with the new offer\.
+If the sender type is a viewer, then it sends the offer to a master\. Also, it is not necessary to specify the `RecipientClientId` and any specified value for `RecipientClientId` is ignored\. If the sender type is master, the offer is sent to the target viewer specified by the `RecipientClientId`\. `RecipientClientId` is a required input in this case\.
+
+A master client app is allowed to send an offer to any viewer, whereas a viewer client app is only allowed to send an offer to a master client app\. If a viewer client app attempts to send an offer to another viewer client app, the request will NOT be honored\. If there is an outstanding offer for the same client which is not yet delivered, it is overwritten with the new offer\.
 
 ## Request<a name="kvswebrtc-websocket-apis-3-request"></a>
 
 ```
 {
     "action": "SDP_OFFER",
+    "recipientClientId": "string",
     "messagePayload": "string",
     "correlationId": "string"
 }
@@ -16,6 +19,11 @@ For `SINGLE_MASTER` channels, only viewers are allowed to send offers\. A viewer
 + **action** \- Type of the message that is being sent\.
   + Type: ENUM
   + Valid values: SDP\_OFFER, SDP\_ANSWER, ICE\_CANDIDATE
+  + Length constraints: Minimum length of 1\. Maximum length of 256\.
+  + Pattern: \[a\-zA\-Z0\-9\_\.\-\]\+
+  + Required: Yes
++ **recipientClientId** \- The unique identifier for the recipient\.
+  + Type: String
   + Length constraints: Minimum length of 1\. Maximum length of 256\.
   + Pattern: \[a\-zA\-Z0\-9\_\.\-\]\+
   + Required: Yes

@@ -2,7 +2,9 @@
 
 Sends the answer to the target recipient\. The prerequisite is that the client must be already connected to the WebSocket endpoint obtained from the `GetSignalingChannelEndpoint` API\.
 
-For `SINGLE_MASTER` channels, only the master is allowed to send an answer to a viewer\. The answer is sent to the target specified by the `RecipientClientId`\. If a viewer client app attempts to send an answer to another viewer client app, the request will NOT be honored\. If there is an outstanding answer for the same client which is not yet delivered, it is overwritten with the new answer\.
+If the sender type is a viewer, then it sends the answer to a master\. Also, it is not necessary to specify the RecipientClientId and any specified value for RecipientClientId is ignored\. If the sender type is master, the answer is sent to the target viewer specified by the RecipientClientId\. RecipientClientId is a required input in this case\.
+
+A master client app is allowed to send an answer to any viewer, whereas a viewer client app is only allowed to send an answer to a master client app\. If a viewer client app attempts to send an answer to another viewer client app, the request will NOT be honored\. If there is an outstanding answer for the same client which is not yet delivered, it is overwritten with the new answer\.
 
 ## Request<a name="kvswebrtc-websocket-apis-4-request"></a>
 

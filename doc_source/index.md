@@ -43,4 +43,4 @@ Amazon's trademarks and trade dress may not be used in
    + [Monitoring Kinesis Video Streams with WebRTC Metrics with CloudWatch](kvswebrtc-monitoring-cw.md)
    + [Logging Kinesis Video Streams with WebRTC API Calls with AWS CloudTrail](kvswebrtc-monitoring-ct.md)
 + [Document History for the Amazon Kinesis Video Streams with WebRTC Developer Guide](doc-history.md)
-+ [AWS Glossary](glossary.md)
++ [AWS glossary](glossary.md)
