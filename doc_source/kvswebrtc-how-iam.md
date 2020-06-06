@@ -79,7 +79,7 @@ arn:aws:kinesisvideo:region:account-id:channel/channel-name/code
 For example:
 
 ```
-"Resource": arn:aws:kinesisvideo::*:111122223333:channel/my-channel/0123456789012
+"Resource": arn:aws:kinesisvideo:*:111122223333:channel/my-channel/0123456789012
 ```
 
 You can get the ARN of a channel using [DescribeSignalingChannel](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_DescribeStream.html)\.
