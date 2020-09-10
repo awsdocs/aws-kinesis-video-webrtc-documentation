@@ -25,7 +25,7 @@ For information about Kinesis Video Streams with WebRTC pricing, see [Amazon Kin
 You can work with Kinesis Video Streams with WebRTC in any of the following ways: 
 
 **Amazon Kinesis Video Streams Console**  
-[https://console\.aws\.amazon\.com/kinesisvideo](https://console.aws.amazon.com/kinesisvideo)  
+[https://console.aws.amazon.com/kinesisvideo/home](https://console.aws.amazon.com/kinesisvideo/home)  
 The console is a browser\-based interface to access and use Kinesis Video Streams with WebRTC\.
 
 **AWS SDKs**  
