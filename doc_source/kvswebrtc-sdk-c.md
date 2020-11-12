@@ -12,12 +12,15 @@ $ git clone --recursive https://github.com/awslabs/amazon-kinesis-video-streams-
 
 ## Build the Kinesis Video Streams with WebRTC SDK in C<a name="gs-build-sdk"></a>
 
+**Important**  
+Before you complete these steps on a macOS and depending on the version of the macOS you have, you must run `xcode-select --install` to download the package with the command line tools and header\. Then open `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg` and follow the intaller to install the command line tools and header\. You only need to do this once and before invoking `cmake`\. If you already have the command line tools and header installed, you do not need to run this command again\.
+
 Complete the following steps:
 
 ****
 
 1. Install cmake:
-   + On macOS, run `brew install cmake` 
+   + On macOS, run `brew install cmake pkg-config srtp` 
    + on Ubuntu, run `sudo apt-get install pkg-config cmake libcap2 libcap-dev`
 
 1. Obtain the access key and the secret key of the AWS account that you want to use for this demo\.
@@ -28,7 +31,9 @@ Complete the following steps:
    mkdir -p amazon-kinesis-video-streams-webrtc-sdk-c/build; cd amazon-kinesis-video-streams-webrtc-sdk-c/build; cmake ..
    ```
 
-1. Navigate to the `build` directory you just created with the step above, and run `make` to build the WebRTC C SDK and its provided samples\.
+1. Now that you're in the `build` directory you just created with the step above, run `make` to build the WebRTC C SDK and its provided samples\.
+**Note**  
+ The `kvsWebrtcClientMasterGstSample` will NOT be built if the system doesn't have `gstreamer` installed\. To make sure it is built \(on macOS\) you must run: `brew install gstreamer gst-plugins-base gst-plugins-good` 
 
 ## Run the Samples for the WebRTC SDK in C<a name="gs-run-c-sample"></a>
 

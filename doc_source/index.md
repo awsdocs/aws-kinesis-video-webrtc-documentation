@@ -33,6 +33,7 @@ Amazon's trademarks and trade dress may not be used in
       + [WebRTC SDK in JavaScript for Web Applications](kvswebrtc-sdk-js.md)
       + [WebRTC SDK for Android](kvswebrtc-sdk-android.md)
       + [WebRTC SDK for iOS](kvswebrtc-sdk-ios.md)
+      + [Client Metrics for the WebRTC C SDK](kvswebrtc-reference.md)
 + [Security](kvswebrtc-security.md)
    + [Controlling Access to Kinesis Video Streams with WebRTC Resources Using IAM](kvswebrtc-how-iam.md)
    + [Compliance Validation for Kinesis Video Streams with WebRTC](kvswebrtc-compliance-validation.md)

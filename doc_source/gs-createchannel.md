@@ -4,7 +4,7 @@ You can use the Kinesis Video Streams console, the AWS APIs \([CreateSignalingCh
 
 ## Create a Signaling Channel Using the Console<a name="gs-createchannel-console"></a>
 
-1. Sign in to the AWS Management Console and open the Amazon Kinesis Video Streams console at [https://console\.aws\.amazon\.com/kinesisvideo](https://console.aws.amazon.com/kinesisvideo)\.
+1. Sign in to the AWS Management Console and open the Amazon Kinesis Video Streams console at [https://console\.aws\.amazon\.com/kinesisvideo/home](https://console.aws.amazon.com/kinesisvideo/home)\.
 
 1. On the **Signaling channels** page, choose **Create signaling channel**\.
 
