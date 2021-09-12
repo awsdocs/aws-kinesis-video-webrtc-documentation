@@ -50,7 +50,7 @@ To run either of these samples, complete the following steps:
    export AWS_ACCESS_KEY_ID= <Your AWS account access Key>
    export AWS_SECRET_ACCESS_KEY= <AWS account secret key>
    export AWS_KVS_CACERT_PATH= <Full path of your cert.pem file. It is typically available in the certs directory inside
-   Kinesis-video-webrtc-native-build/certs/cert.pm>
+   Kinesis-video-webrtc-native-build/certs/cert.pem>
    ```
 
 1. Run either of the sample applications by passing to it the name that you want to give to your signaling channel\. The application creates the signaling channel using the name you provide\. For example, to create a signaling channel called `myChannel` and to start sending sample H264/Opus frames via this channel, run the following command: 
